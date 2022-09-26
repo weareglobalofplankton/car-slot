@@ -1,0 +1,17 @@
+<script>
+  google.script.run.withSuccessHandler(showData).getData();
+  function showData(dataArray){
+    $(document).ready(function(){
+      $('#data-table').DataTable({
+        data: dataArray,
+        columns: [
+          {"title":"ทะเบียนรถ"},
+          {"title":"บ้านเลขที่"},
+          {"title":"ชื่อ"},
+          {"title":"เบอร์มือถือ"},
+
+        ]
+      });
+    });
+  }
+</script>
