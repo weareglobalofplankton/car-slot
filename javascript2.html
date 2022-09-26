@@ -1,0 +1,19 @@
+<script>
+  google.script.run.withSuccessHandler(showDataa).getDataFromRowData();
+  function showDataa(dataArray){
+    $(document).ready(function(){
+      $('#data-tablee').DataTable({
+        data: dataArray,
+        columns: [
+          {"title":"CarSlot"},
+          {"title":"Position"},
+          {"title":"Time"},
+          {"title":"SoureImage"},
+          {"title":"Status"},
+          {"title":"Discretion"},
+          {"title":"License plate"}
+        ]
+      });
+    });
+  }
+</script>
